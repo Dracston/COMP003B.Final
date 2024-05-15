@@ -1,3 +1,7 @@
+using COMP003B.Final.Data;
+using Microsoft.EntityFrameworkCore;
+
+
 namespace COMP003B.Final
 {
     public class Program
@@ -8,6 +12,11 @@ namespace COMP003B.Final
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            //Set up database context.
+            builder.Services.AddDbContext<OnlineStoreHubContext>(options =>
+                options.UseSqlServer("Name=ConnectionStrings:DefaultConnection"));
+
 
             var app = builder.Build();
 
