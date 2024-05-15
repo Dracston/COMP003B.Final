@@ -1,11 +1,11 @@
 ﻿namespace COMP003B.Final.Models
 {
-    public class Order_project
+    public class Orderproduct
     {
-        public int productOrderId { get; set; }
+        public int orderProductId { get; set; }
         public int productId { get; set; }
         public int orderId { get; set; }
 
-        public string productOrderStatus { get; set; }
+        public string orderProductStatus { get; set; }
     }
 }
