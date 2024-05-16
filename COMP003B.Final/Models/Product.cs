@@ -8,13 +8,20 @@ namespace COMP003B.Final.Models
         public int productId { get; set; }
 
         [Required]
-        public decimal productPrice { get; set; }
+        public decimal Price { get; set; }
         [Required]
-        public string productName { get; set; }
+        public string Name { get; set; }
         [Required]
-        public int productCode { get; set; }
+        [DataType(DataType.DateTime)]
+        public int ReleaseDate { get; set; }
         [Required]
         public int productQuantity { get; set; }
+        [Required]
+        public string Publisher { get; set; }  
+        
+
+        //Collection Navigation property
+        public virtual ICollection<Product> GetProducts { get; set; }
        
 
 

@@ -4,14 +4,18 @@ namespace COMP003B.Final.Models
 {
     public class Order
     {
-        public int orderId { get; set; }
+
+        [Key] public int orderId { get; set; }
         public int customerId { get; set; }
 
         [Required]
-        public string orderName { get; set; }
+        public string Name { get; set; }
 
         [Required]
-        public decimal orderPrice { get; set; }
+        public decimal Price { get; set; }
+        [Required]
+        [DataType(DataType.DateTime)]
+        public DateTime orderDate { get; set; } = DateTime.Now;
 
        
     }
